@@ -1,0 +1,54 @@
+<app-search></app-search>
+
+
+<div *ngIf="products.length === 0">
+  <b>La liste est vide!</b>
+  <p>Nous vous invitons à en créer!!</p>
+</div>
+
+<section class="py-5">
+  <div class="container px-4 px-lg-5 mt-5">
+    <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+      <ul>
+        <li *ngFor="let product of products">
+          <a routerLink="/food/{{product.id}}">
+            <img [src]="product.imageUrl" [alt]="product.name" />
+            <div class="content">
+              <div class="name">
+                {{product.name}}
+              </div>
+              <span class="favorite {{product.favorite?'':'not'}}">
+                ❤
+              </span>
+              <!-- <div class="stars">
+                <star-rating [value]="food.stars" [totalstars]="5" checkedcolor="red" uncheckedcolor="black" size="22px"
+                  [readonly]="true">
+                </star-rating>
+              </div> -->
+
+
+              <div class="price">
+                <span>
+                  {{product.price}}
+                  <span>Fcfa</span>
+                </span>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
