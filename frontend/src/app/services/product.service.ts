@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { sample_products } from '../data';
-import { Product } from '../shared/models/product';
+import { sample_products, sample_tags } from '../data';
+import { Product } from '../shared/models/Product';
+import { Tag } from '../shared/models/Tag';
 
 @Injectable({
   providedIn: 'root'
@@ -19,15 +20,15 @@ export class ProductService {
     return this.getAll().filter(product => product.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()));
   }
 
-  // getAllTags(): Observable<Tag[]> {
-  //   return this.http.get<Tag[]>(FOODS_TAGS_URL);
-  // }
+  getAllTags(): Tag[]{
+    return sample_tags;
+  }
 
-  // getAllFoodsByTag(tag: string): Observable<Product[]> {
-  //   return tag === "All" ?
-  //     this.getAll() :
-  //     this.http.get<Product[]>(FOODS_BY_TAG_URL + tag);
-  // }
+  getAllProductsByTag(tag: string):Product[] {
+    return tag == "All"?
+    this.getAll():
+    this.getAll().filter(product => product.tags?.includes(tag));
+  }
 
   // getFoodById(productId:string):Observable<Product>{
   //   return this.http.get<Product>(FOOD_BY_ID_URL + foodId);

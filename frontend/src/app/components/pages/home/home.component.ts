@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from 'src/app/services/product.service';
-import { Product } from 'src/app/shared/models/product';
+import { Product } from 'src/app/shared/models/Product';
 
 @Component({
   selector: 'app-home',
@@ -16,6 +16,8 @@ export class HomeComponent implements OnInit {
     activatedRoute.params.subscribe((params) => {
       if(params.searchTerm)
       this.products = this.productService.getAllProductsBySearchTerm(params.searchTerm);
+      else if(params.tag)
+      this.products = this.productService.getAllProductsByTag(params.tag);
       else
       this.products = productService.getAll();
     })
