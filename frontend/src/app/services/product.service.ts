@@ -30,7 +30,7 @@ export class ProductService {
     this.getAll().filter(product => product.tags?.includes(tag));
   }
 
-  // getFoodById(productId:string):Observable<Product>{
-  //   return this.http.get<Product>(FOOD_BY_ID_URL + foodId);
-  // }
+  getProductById(productId:string):Product{
+    return this.getAll().find(product => product.id == productId) ?? new Product();
+  }
 }

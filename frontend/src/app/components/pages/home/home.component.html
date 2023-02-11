@@ -3,17 +3,17 @@
 <app-tags></app-tags>
 
 
-<div *ngIf="products.length === 0">
-  <b>La liste est vide!</b>
-  <p>Nous vous invitons à en créer!!</p>
-</div>
+<!-- <div *ngIf="products.length === 0">
+  <b>Nous n'avons aucun article de ce type !</b>
+  <p>veuillez chercher un autre article</p>
+</div> -->
 
 <section class="py-5">
   <div class="container px-4 px-lg-5 mt-5">
     <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
       <ul>
         <li *ngFor="let product of products">
-          <a routerLink="/food/{{product.id}}">
+          <a routerLink="/product/{{product.id}}">
             <img [src]="product.imageUrl" [alt]="product.name" />
             <div class="content">
               <div class="name">
