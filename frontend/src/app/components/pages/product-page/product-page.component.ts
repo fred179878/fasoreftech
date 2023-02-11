@@ -15,6 +15,7 @@ export class ProductPageComponent implements OnInit {
     private cartService:CartService, private router: Router) {
     activatedRoute.params.subscribe((params) => {
       if(params.id)
+
       this.product = productService.getProductById(params.Id);
 
     })
