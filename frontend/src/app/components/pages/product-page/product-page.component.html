@@ -1,4 +1,11 @@
-<div *ngIf="product" class="container">
+<app-page-not-found
+  [visible]="!product.id"
+  notFoundMessage="Aucun article trouvé"
+  resetLinkText="Page d'accueil"
+></app-page-not-found>
+
+
+<div *ngIf="product.id" class="container">
   <img [src]="product.imageUrl" [alt]="product.name"/>
 
   <div class="details">

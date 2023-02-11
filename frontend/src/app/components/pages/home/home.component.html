@@ -1,6 +1,10 @@
 <!-- <app-carrousel></app-carrousel> -->
 <app-search></app-search>
 <app-tags></app-tags>
+<app-page-not-found
+[visible]="!products || !products.length"
+resetLinkText="Autre recherche"
+></app-page-not-found>
 
 
 <!-- <div *ngIf="products.length === 0">

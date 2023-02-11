@@ -11,6 +11,7 @@ import { CarrouselComponent } from './components/partials/carrousel/carrousel.co
 import { ProductPageComponent } from './components/pages/product-page/product-page.component';
 import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
 import { TitleComponent } from './components/partials/title/title.component';
+import { PageNotFoundComponent } from './components/partials/page-not-found/page-not-found.component';
 
 
 
@@ -27,7 +28,8 @@ import { TitleComponent } from './components/partials/title/title.component';
     CarrouselComponent,
     ProductPageComponent,
     CartPageComponent,
-    TitleComponent
+    TitleComponent,
+    PageNotFoundComponent
 
 
   ],
