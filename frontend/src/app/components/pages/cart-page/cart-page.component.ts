@@ -27,4 +27,10 @@ export class CartPageComponent implements OnInit{
     const quantity = parseInt(quantityInString);
     this.cartService.changeQuantity(cartItem.product.id, quantity);
   }
+
+  // sendProductLink(phoneNumber: string, productUrl: string) {
+  //   window.open(`whatsapp://send?phone=${phoneNumber}&text=${encodeURI(productUrl)}`, '_blank');
+  // }
+
+
 }

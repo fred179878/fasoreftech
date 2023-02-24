@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { sample_products, sample_tags } from '../data';
+import { sample_products, sample_tags } from '../../data';
 import { Product } from '../shared/models/Product';
 import { Tag } from '../shared/models/Tag';
 

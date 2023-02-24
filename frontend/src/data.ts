@@ -1,5 +1,5 @@
-import { Product } from "./shared/models/Product";
-import { Tag } from "./shared/models/Tag";
+import { Product } from "./app/shared/models/Product";
+import { Tag } from "./app/shared/models/Tag";
 
 export const sample_products: Product[] = [
   {
